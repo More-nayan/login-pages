@@ -10,6 +10,30 @@
 </head>
 <body>
   
+  <div class="container">
+    <form action="#">
+      <label for="uname">User Name</label>
+      <input type="text" name="uname" id="uname" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="psw" name="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z].{8,})"
+        title="Must conatin at least one number and one 
+        uppercase and lowercase letter,and at least 8 or more 
+        characters" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div id="message">
+    <h3>Password must contain the following</h3>
+    
+    <p id="letter" class="invalid">A <b>lowercase</b>letter</p>
+    <p id="letter" class="invalid">A <b>capital or (uppercase)</b>letter</p>
+    <p id="letter" class="invalid">A <b>number</b></p>
+    <p id="letter" class="invalid">Minimum <b>8 charcters</b></p>
+  </div>
 
   <script src="formValidation.js"></script>
 </body>
