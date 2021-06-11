@@ -20,6 +20,9 @@ input[type=submit] {
   background-color: #04AA6D;
   color:#fff;
 }
+input[type=checkbox]{
+  width: auto;
+}
 
 #message{
   display: none;

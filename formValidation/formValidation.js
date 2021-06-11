@@ -4,7 +4,7 @@ const capital = document.getElementById('capital');
 const number = document.getElementById('Number');
 const Length = document.getElementById('length');
 const message = document.getElementById('message');
-
+const passVisible = document.getElementById('passVisible');
 
 //when user click on password box then display message div
 passBx.addEventListener('focus',() => {
@@ -57,5 +57,13 @@ passBx.addEventListener('keyup',() => {
     Length.classList.remove('valid');
     Length.classList.add('invalid');
    }
+})
 
+//password validation
+passVisible.addEventListener('change',() => {
+  if(passBx.type == "password"){
+    passBx.type = "text";
+  }else{
+    passBx.type = "password";
+  }
 })
