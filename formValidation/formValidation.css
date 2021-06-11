@@ -22,7 +22,7 @@ input[type=submit] {
 }
 
 #message{
-  /* display: none; */
+  display: none;
   background: #f1f1f1;
   color:#000;
   padding: 20px;
@@ -37,15 +37,15 @@ input[type=submit] {
   color:green;
 }
 .valid::before{
+  content: "✓";
   position: relative;
   left:-35px;
-  content: "&#10004;";
 }
 .invalid{
   color:red;
 }
 .invalid::before{
+  content: "X";
   position: relative;
   left: -35px;
-  content: "&#10006;";
 }
