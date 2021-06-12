@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>signIn-SignUp</title>
 
-  <script src="https://kit.fontawesome.com/229213525d.js" crossorigin="anonymous"></script>
-
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
@@ -22,7 +20,9 @@
     <div id="signIn" class="tabcontent">
       <form>
         <input type="text" placeholder="User Name" required/>
-        <input type="password" placeholder="Password" required/>
+        <input type="password" id="myPassword" placeholder="Password" required/>
+        
+        <input type="checkbox" id="visibilePass">Show Password
         <p class="forgot-psw">Forgot Password</p>
         <button class="submit-btn">Sign In</button>
       </form>
@@ -32,10 +32,18 @@
       <form>
         <input type="email" placeholder="Email Address" required/>
         <input type="text" placeholder="Contact Number" required/>
-        <input type="password" placeholder="Create Password" required/>
+        <input type="password" id="createPassword" placeholder="Create Password" 
+               pattern="(?=.*\d)(?=.*\[a-z])(?=.*\[A-Z]).{8,}" required/>
         <input type="checkbox"><span>By Clicking this checkbox you are agree with our terms and condition</span>
         <button class="submit-btn">Sign Up</button>
       </form>
+
+      <div class="message">
+        <p id="letter" class="invalid">A <b>Lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>Capital or (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>Number</b> </p>
+        <p id="length" class="invalid">Minimum <b> 8 characters</b> </p>
+      </div>
     </div>
 
   </div>
