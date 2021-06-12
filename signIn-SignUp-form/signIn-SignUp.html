@@ -5,30 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>signIn-SignUp</title>
+
+  <script src="https://kit.fontawesome.com/229213525d.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="signIn-SignUp.css">
 </head>
 <body>
   
   <div class="container">
-    <div class="overlay">
-       <div class="sign-in">
-         <h1>Welcome Back!</h1>
-         <p>
-           To keep connected with us please login 
-           with your personal info 
-         </p>
-         <button class="switch-btn" id="slide-right-btn"> Sign In</button>
-       </div>
+    <button class="tablink" onclick="openPage('signIn',this,'#f0d9eb')" id="defaultOpen">Sign In</button>
+    <button class="tablink" onclick="openPage('signUp',this,'#f0d9eb')">Sign UP</button>
 
-       <div class="sign-in">
-        <h1>Hello, Friend!</h1>
-        <p>
-          Enter your personal details and start a journey
-          with us 
-        </p>
-        <button class="switch-btn" id="slide-left-btn"> Sign Up</button>
-      </div>
+    <div id="signIn" class="tabcontent">
+      <form>
+        <input type="text" placeholder="User Name" required/>
+        <input type="password" placeholder="Password" required/>
+        <p class="forgot-psw">Forgot Password</p>
+        <button class="submit-btn">Sign In</button>
+      </form>
     </div>
+
+    <div id="signUp" class="tabcontent">
+      <form>
+        <input type="email" placeholder="Email Address" required/>
+        <input type="text" placeholder="Contact Number" required/>
+        <input type="password" placeholder="Create Password" required/>
+        <input type="checkbox"><span>By Clicking this checkbox you are agree with our terms and condition</span>
+        <button class="submit-btn">Sign Up</button>
+      </form>
+    </div>
+
   </div>
 
+  <script src="signIn-SignUp.js"></script>
 </body>
 </html>
